@@ -61,11 +61,14 @@ ctxsave generate --model sonnet --copy
 ### `ctxsave init`
 Initialize context tracking in the current directory. Creates `.ctxsave/` with a SQLite database.
 
-### `ctxsave capture cursor <path>`
+### `ctxsave capture cursor <path>` or `ctxsave capture cursor (auto detect the JSONL file in default dircttory)`
 Parse a Cursor agent transcript JSONL file. Extracts conversations, decisions, tool calls (file edits, commands), and errors.
 
 ```bash
 ctxsave capture cursor ~/.cursor/projects/my-project/agent-transcripts/abc123.jsonl
+```
+```bash
+ctxsave capture cursor
 ```
 
 ### `ctxsave capture git`
